@@ -1,0 +1,23 @@
+﻿table {
+    direction: ltr;
+    border-spacing: 2px;
+    background-color: firebrick;
+    border: 1px solid;
+}
+
+th {
+    background-color: lawngreen;
+    border: 1px solid;
+    font-size: 16pt;
+}
+
+td {
+    border: 1px solid;
+    font-size: 16pt;
+    background-color: white;
+}
+
+ol {
+    font-style: italic;
+    font-size: 18pt;
+}

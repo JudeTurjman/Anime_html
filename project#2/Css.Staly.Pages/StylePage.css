@@ -1,0 +1,35 @@
+﻿body {
+    background-color: lightyellow;
+}
+
+h1 {
+    color: goldenrod;
+    font-weight: bold;
+    font-size: 32pt;
+    text-align: center;
+}
+
+h2 {
+    font-size: 24pt;
+    text-align: center;
+    color: goldenrod;
+    font-weight: bold;
+}
+
+div {
+    font-style: italic;
+    font-size: 18pt;
+}
+
+h3 {
+    font-size: 18pt;
+}
+
+li {
+    font-size: 18pt;
+    font-style: italic;
+}
+
+img {
+    height: 500px;
+}

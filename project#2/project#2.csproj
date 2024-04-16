@@ -1,0 +1,695 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C1079EC7-53EA-4017-8C55-A7D3BF167E4C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>project_2</RootNamespace>
+    <AssemblyName>project#2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44363</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.2.0.1\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.3.4.1\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.5.0.0\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.1.3\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="App_Data\usersDB.mdf" />
+    <Content Include="App_Data\usersDB_log.ldf">
+      <DependentUpon>usersDB.mdf</DependentUpon>
+    </Content>
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-grid.rtl.css" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\bootstrap-utilities.css" />
+    <Content Include="Content\bootstrap-utilities.min.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\bootstrap.rtl.css" />
+    <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Css.Staly.Pages\StyleMaster.css" />
+    <Content Include="Css.Staly.Pages\StylePage.css" />
+    <Content Include="Css.Staly.Pages\StyleTable1.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Gifs\GifAnime.gif" />
+    <Content Include="Gifs\GifAnime2.gif" />
+    <Content Include="Gifs\GifAnime3.gif" />
+    <Content Include="Gifs\GifAttackonTitan1.gif" />
+    <Content Include="Gifs\GifBaki1.gif" />
+    <Content Include="Gifs\GifBerserk1.gif" />
+    <Content Include="Gifs\GifBleach1.gif" />
+    <Content Include="Gifs\GifBlueLock1.gif" />
+    <Content Include="Gifs\GifDeathNote1.gif" />
+    <Content Include="Gifs\GifHunterxHunter1.gif" />
+    <Content Include="Gifs\GifNaruto1.gif" />
+    <Content Include="Gifs\GifOnePiece1.gif" />
+    <Content Include="Gifs\GifVinlandSaga1.gif" />
+    <Content Include="Global.asax" />
+    <Content Include="HTMLPages\AdminLogin.aspx" />
+    <Content Include="HTMLPages\AdminLogout.aspx" />
+    <Content Include="HTMLPages\AnimeWMP.aspx" />
+    <Content Include="HTMLPages\AttackOnTitanWMP.aspx" />
+    <Content Include="HTMLPages\BakiWMP.aspx" />
+    <Content Include="HTMLPages\BerserkWMP.aspx" />
+    <Content Include="HTMLPages\BleachWMP.aspx" />
+    <Content Include="HTMLPages\BlueLockWMP.aspx" />
+    <Content Include="HTMLPages\Chat.aspx" />
+    <Content Include="HTMLPages\ChForm.aspx" />
+    <Content Include="HTMLPages\DeathNoteWMP.aspx" />
+    <Content Include="HTMLPages\DeleteAction.aspx" />
+    <Content Include="HTMLPages\DeleteActionAll.aspx" />
+    <Content Include="HTMLPages\DeleteAll.aspx" />
+    <Content Include="HTMLPages\DeleteUsers.aspx" />
+    <Content Include="HTMLPages\EditUserInfo.aspx" />
+    <Content Include="HTMLPages\EiichiroOda.aspx" />
+    <Content Include="HTMLPages\HunterXHunter.aspx" />
+    <Content Include="HTMLPages\Intro.aspx" />
+    <Content Include="HTMLPages\KentaroMiura.aspx" />
+    <Content Include="HTMLPages\Login.aspx" />
+    <Content Include="HTMLPages\Logout.aspx" />
+    <Content Include="HTMLPages\MasashiKishimoto.aspx" />
+    <Content Include="HTMLPages\NarutoWMP.aspx" />
+    <Content Include="HTMLPages\OnePieceWMP.aspx" />
+    <Content Include="HTMLPages\Queries.aspx" />
+    <Content Include="HTMLPages\QueryHard.aspx" />
+    <Content Include="HTMLPages\QuerySimple.aspx" />
+    <Content Include="HTMLPages\TableWMP.aspx" />
+    <Content Include="HTMLPages\TakehikoInoue.aspx" />
+    <Content Include="HTMLPages\UsersInfo.aspx" />
+    <Content Include="HTMLPages\VinlandSagaWMP.aspx" />
+    <Content Include="HTMLPages\WritersWMP.aspx" />
+    <Content Include="HTMLPages\YoshihiroTogashi.aspx" />
+    <Content Include="Images\Anime_1-removebg-preview.png" />
+    <Content Include="Images\Anime_10-removebg-preview.png" />
+    <Content Include="Images\Anime_2-removebg-preview.png" />
+    <Content Include="Images\Anime_3-removebg-preview.png" />
+    <Content Include="Images\Anime_4-removebg-preview.png" />
+    <Content Include="Images\Anime_5-removebg-preview.png" />
+    <Content Include="Images\Anime_6-removebg-preview.png" />
+    <Content Include="Images\Anime_8-removebg-preview.png" />
+    <Content Include="Images\Anime_8-removebg-preview1.png" />
+    <Content Include="Images\Anime_9-removebg-preview.png" />
+    <Content Include="Images\Arrow_1-removebg-preview %281%29.png" />
+    <Content Include="Images\Arrow_2-removebg-preview %281%29.png" />
+    <Content Include="Images\AttackonTitan_1-removebg-preview %282%29.png" />
+    <Content Include="Images\AttackonTitan_2-removebg-preview %281%29.png" />
+    <Content Include="Images\AttackonTitan_3-removebg-preview %281%29.png" />
+    <Content Include="Images\AttackonTitan_4-removebg-preview %281%29.png" />
+    <Content Include="Images\AttackonTitan_5-removebg %282%29.png" />
+    <Content Include="Images\AttackonTitan_6-removebg-preview %283%29.png" />
+    <Content Include="Images\AttackonTitan_7-removebg-preview %283%29.png" />
+    <Content Include="Images\Baki_1-removebg-preview.png" />
+    <Content Include="Images\Baki_2-removebg-preview.png" />
+    <Content Include="Images\Baki_3-removebg-preview.png" />
+    <Content Include="Images\Baki_4-removebg-preview.png" />
+    <Content Include="Images\Baki_5-removebg-preview.png" />
+    <Content Include="Images\Baki_6-removebg-preview.png" />
+    <Content Include="Images\Baki_7-removebg-preview.png" />
+    <Content Include="Images\Berserk_1-removebg-preview.png" />
+    <Content Include="Images\Berserk_2-removebg-preview.png" />
+    <Content Include="Images\Berserk_3-removebg-preview.png" />
+    <Content Include="Images\Berserk_4-removebg-preview.png" />
+    <Content Include="Images\Berserk_5-removebg-preview.png" />
+    <Content Include="Images\Berserk_6-removebg-preview.png" />
+    <Content Include="Images\Berserk_7-removebg-preview.png" />
+    <Content Include="Images\Bleach_1-removebg-preview %281%29.png" />
+    <Content Include="Images\Bleach_2-removebg-preview.png" />
+    <Content Include="Images\Bleach_3-removebg-preview.png" />
+    <Content Include="Images\Bleach_4-removebg-preview %281%29.png" />
+    <Content Include="Images\Bleach_5-removebg-preview.png" />
+    <Content Include="Images\Bleach_6-removebg-preview.png" />
+    <Content Include="Images\Bleach_7-removebg-preview.png" />
+    <Content Include="Images\BlueLock_1-removebg-preview.png" />
+    <Content Include="Images\BlueLock_2-removebg-preview.png" />
+    <Content Include="Images\BlueLock_3-removebg-preview.png" />
+    <Content Include="Images\BlueLock_4-removebg-preview.png" />
+    <Content Include="Images\BlueLock_5-removebg-preview.png" />
+    <Content Include="Images\BlueLock_6-removebg-preview.png" />
+    <Content Include="Images\BlueLock_7-removebg-preview.png" />
+    <Content Include="Images\DeathNote_1-removebg-preview %281%29.png" />
+    <Content Include="Images\DeathNote_2-removebg-preview.png" />
+    <Content Include="Images\DeathNote_3-removebg-preview.png" />
+    <Content Include="Images\DeathNote_4-removebg-preview.png" />
+    <Content Include="Images\DeathNote_5-removebg-preview.png" />
+    <Content Include="Images\DeathNote_6-removebg-preview.png" />
+    <Content Include="Images\DeathNote_7-removebg-preview.png" />
+    <Content Include="Images\HunterxHunter_1-removebg-preview.png" />
+    <Content Include="Images\HunterxHunter_2-removebg-preview.png" />
+    <Content Include="Images\HunterxHunter_3-removebg-preview %281%29.png" />
+    <Content Include="Images\HunterxHunter_4-removebg-preview.png" />
+    <Content Include="Images\HunterxHunter_5-removebg-preview.png" />
+    <Content Include="Images\HunterxHunter_6-removebg-preview.png" />
+    <Content Include="Images\HunterxHunter_7-removebg-preview.png" />
+    <Content Include="Images\Inoue_1-removebg-preview.png" />
+    <Content Include="Images\Inoue_2-removebg-preview.png" />
+    <Content Include="Images\Inoue_3-removebg-preview.png" />
+    <Content Include="Images\Inoue_4-removebg-preview.png" />
+    <Content Include="Images\Kishimoto_1-removebg-preview.png" />
+    <Content Include="Images\Kishimoto_2-removebg-preview.png" />
+    <Content Include="Images\Kishimoto_3-removebg-preview.png" />
+    <Content Include="Images\Kishimoto_4-removebg-preview.png" />
+    <Content Include="Images\Miura_1-removebg-preview.png" />
+    <Content Include="Images\Miura_2-removebg-preview.png" />
+    <Content Include="Images\Miura_3-removebg-preview.png" />
+    <Content Include="Images\Miura_4-removebg-preview.png" />
+    <Content Include="Images\Naruto_1-removebg-preview.png" />
+    <Content Include="Images\Naruto_2-removebg-preview %281%29.png" />
+    <Content Include="Images\Naruto_3-removebg-preview %282%29.png" />
+    <Content Include="Images\Naruto_4-removebg-preview.png" />
+    <Content Include="Images\Naruto_5-removebg-preview %281%29.png" />
+    <Content Include="Images\Naruto_6-removebg-preview.png" />
+    <Content Include="Images\Naruto_7-removebg-preview %281%29.png" />
+    <Content Include="Images\Oda_1-removebg-preview %281%29.png" />
+    <Content Include="Images\Oda_2-removebg-preview.png" />
+    <Content Include="Images\Oda_3-removebg-preview.png" />
+    <Content Include="Images\Oda_4-removebg-preview.png" />
+    <Content Include="Images\One_Piece_1-removebg-preview.png" />
+    <Content Include="Images\One_Piece_2-removebg-preview %282%29.png" />
+    <Content Include="Images\One_Piece_3-removebg-preview %281%29.png" />
+    <Content Include="Images\One_Piece_4-removebg-preview %281%29.png" />
+    <Content Include="Images\One_Piece_5-removebg-preview %281%29.png" />
+    <Content Include="Images\One_Piece_6-removebg-preview.png" />
+    <Content Include="Images\One_Piece_7-removebg-preview.png" />
+    <Content Include="Images\Togashi_1-removebg-preview.png" />
+    <Content Include="Images\Togashi_2-removebg-preview.png" />
+    <Content Include="Images\Togashi_3-removebg-preview.png" />
+    <Content Include="Images\Togashi_4-removebg-preview.png" />
+    <Content Include="Images\Vinland_Saga_1-removebg-preview.png" />
+    <Content Include="Images\Vinland_Saga_2-removebg-preview %281%29.png" />
+    <Content Include="Images\Vinland_Saga_3-removebg-preview %281%29.png" />
+    <Content Include="Images\Vinland_Saga_4-removebg-preview %282%29.png" />
+    <Content Include="Images\Vinland_Saga_5-removebg-preview.png" />
+    <Content Include="Images\Vinland_Saga_6-removebg-preview.png" />
+    <Content Include="Images\Vinland_Saga_7-removebg-preview.png" />
+    <Content Include="JavaScript\AdminQueryHard.js" />
+    <Content Include="JavaScript\AdminQuerySimple.js" />
+    <Content Include="JavaScript\Chat.js" />
+    <Content Include="JavaScript\Signup.js" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Content\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\bootstrap.rtl.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\bootstrap-utilities.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="MasterPage.Master" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Site.Master" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config" />
+    <Content Include="Bundle.config" />
+    <Content Include="Site.Mobile.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\Helper.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\AdminLogout.aspx.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\AdminLogout.aspx.designer.cs">
+      <DependentUpon>AdminLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\AnimeWMP.aspx.cs">
+      <DependentUpon>AnimeWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\AnimeWMP.aspx.designer.cs">
+      <DependentUpon>AnimeWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\AttackOnTitanWMP.aspx.cs">
+      <DependentUpon>AttackOnTitanWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\AttackOnTitanWMP.aspx.designer.cs">
+      <DependentUpon>AttackOnTitanWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\BakiWMP.aspx.cs">
+      <DependentUpon>BakiWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\BakiWMP.aspx.designer.cs">
+      <DependentUpon>BakiWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\BerserkWMP.aspx.cs">
+      <DependentUpon>BerserkWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\BerserkWMP.aspx.designer.cs">
+      <DependentUpon>BerserkWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\BleachWMP.aspx.cs">
+      <DependentUpon>BleachWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\BleachWMP.aspx.designer.cs">
+      <DependentUpon>BleachWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\BlueLockWMP.aspx.cs">
+      <DependentUpon>BlueLockWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\BlueLockWMP.aspx.designer.cs">
+      <DependentUpon>BlueLockWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\Chat.aspx.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\Chat.aspx.designer.cs">
+      <DependentUpon>Chat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\ChForm.aspx.cs">
+      <DependentUpon>ChForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\ChForm.aspx.designer.cs">
+      <DependentUpon>ChForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\DeathNoteWMP.aspx.cs">
+      <DependentUpon>DeathNoteWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\DeathNoteWMP.aspx.designer.cs">
+      <DependentUpon>DeathNoteWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteAction.aspx.cs">
+      <DependentUpon>DeleteAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteAction.aspx.designer.cs">
+      <DependentUpon>DeleteAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteActionAll.aspx.cs">
+      <DependentUpon>DeleteActionAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteActionAll.aspx.designer.cs">
+      <DependentUpon>DeleteActionAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteAll.aspx.cs">
+      <DependentUpon>DeleteAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteAll.aspx.designer.cs">
+      <DependentUpon>DeleteAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteUsers.aspx.cs">
+      <DependentUpon>DeleteUsers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\DeleteUsers.aspx.designer.cs">
+      <DependentUpon>DeleteUsers.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\EditUserInfo.aspx.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\EditUserInfo.aspx.designer.cs">
+      <DependentUpon>EditUserInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\EiichiroOda.aspx.cs">
+      <DependentUpon>EiichiroOda.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\EiichiroOda.aspx.designer.cs">
+      <DependentUpon>EiichiroOda.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\HunterXHunter.aspx.cs">
+      <DependentUpon>HunterXHunter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\HunterXHunter.aspx.designer.cs">
+      <DependentUpon>HunterXHunter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\Intro.aspx.cs">
+      <DependentUpon>Intro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\Intro.aspx.designer.cs">
+      <DependentUpon>Intro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\KentaroMiura.aspx.cs">
+      <DependentUpon>KentaroMiura.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\KentaroMiura.aspx.designer.cs">
+      <DependentUpon>KentaroMiura.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\Logout.aspx.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\Logout.aspx.designer.cs">
+      <DependentUpon>Logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\MasashiKishimoto.aspx.cs">
+      <DependentUpon>MasashiKishimoto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\MasashiKishimoto.aspx.designer.cs">
+      <DependentUpon>MasashiKishimoto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\NarutoWMP.aspx.cs">
+      <DependentUpon>NarutoWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\NarutoWMP.aspx.designer.cs">
+      <DependentUpon>NarutoWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\OnePieceWMP.aspx.cs">
+      <DependentUpon>OnePieceWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\OnePieceWMP.aspx.designer.cs">
+      <DependentUpon>OnePieceWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\Queries.aspx.cs">
+      <DependentUpon>Queries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\Queries.aspx.designer.cs">
+      <DependentUpon>Queries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\QueryHard.aspx.cs">
+      <DependentUpon>QueryHard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\QueryHard.aspx.designer.cs">
+      <DependentUpon>QueryHard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\QuerySimple.aspx.cs">
+      <DependentUpon>QuerySimple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\QuerySimple.aspx.designer.cs">
+      <DependentUpon>QuerySimple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\TableWMP.aspx.cs">
+      <DependentUpon>TableWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\TableWMP.aspx.designer.cs">
+      <DependentUpon>TableWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\TakehikoInoue.aspx.cs">
+      <DependentUpon>TakehikoInoue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\TakehikoInoue.aspx.designer.cs">
+      <DependentUpon>TakehikoInoue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\UsersInfo.aspx.cs">
+      <DependentUpon>UsersInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\UsersInfo.aspx.designer.cs">
+      <DependentUpon>UsersInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\VinlandSagaWMP.aspx.cs">
+      <DependentUpon>VinlandSagaWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\VinlandSagaWMP.aspx.designer.cs">
+      <DependentUpon>VinlandSagaWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\WritersWMP.aspx.cs">
+      <DependentUpon>WritersWMP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\WritersWMP.aspx.designer.cs">
+      <DependentUpon>WritersWMP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTMLPages\YoshihiroTogashi.aspx.cs">
+      <DependentUpon>YoshihiroTogashi.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HTMLPages\YoshihiroTogashi.aspx.designer.cs">
+      <DependentUpon>YoshihiroTogashi.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.Master.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.Master.designer.cs">
+      <DependentUpon>MasterPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64483</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44363/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
